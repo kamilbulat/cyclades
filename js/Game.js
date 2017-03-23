@@ -1,9 +1,16 @@
 ﻿function Game() {
     var scene = main.getScene();
     var plansza = Tablice.getPlansza();
+    var mesh;
     var wodaMaterial;
     var wyspaMaterial;
     var cylinderGeometry;
+    var wodaYellowMesh;
+    var wodaBlackMesh;
+    var wodaMesh;
+    var wyspaYellowMesh;
+    var wyspaBlackMesh;
+    var wyspaMesh
 
     function initMaterials(){
     	wodaMaterial = new THREE.MeshBasicMaterial({
@@ -38,9 +45,50 @@
 
     function initObjects(){
     	cylinderGeometry = new THREE.CylinderGeometry( 10, 10, 2, 6, 1 );
+    	wodaYellowMesh = new THREE.Mesh(CylinderGeometry, wodaYellowMaterial)
+    	wodaBlackMesh = new THREE.Mesh(CylinderGeometry, wodaBlackMaterial)
+    	wodaMesh = new THREE.Mesh(CylinderGeometry, wodaMaterial)
+    	wyspaYellowMesh = new THREE.Mesh(CylinderGeometry, wyspaYellowMaterial)
+    	wyspaBlackMesh = new THREE.Mesh(CylinderGeometry, wyspaBlackMaterial)
+    	wyspaMesh = new THREE.Mesh(CylinderGeometry, wyspaMaterial)
     }
 
     this.drawPlansza = function(){
-
+    	for(var i=0; i<plansza.length; i++){
+    		for(var j=0; j<plansza[i].length; j++){
+    			if(plansza[i][j].typ == "woda")
+    			{
+    				//woda
+    				switch(plansza[i][j].flaga){
+    					case "yellow":
+    						mesh = wodaYellowMesh.clone()
+    					break;
+    					case "black":
+    						mesh = wodaBlackMesh.clone()
+    					break;
+    					default:
+    						mesh = wodaMesh.clone()
+    					break;
+    				}
+    			}
+    			else{
+    				//wyspa
+    				switch(plansza[i][j].flaga){
+    					case "yellow":
+    						mesh = wyspaYellowMesh.clone()
+    					break;
+    					case "black":
+    						mesh = wyspaBlackMesh.clone()
+    					break;
+    					default:
+    						mesh = wyspaMesh.clone()
+    					break;
+    				}	
+    			}
+    			mesh.position.set(j*10, 0, i*10)
+    			scene.add(mesh)
+    			mesh = ""
+    		}
+    	}
     }
 }
