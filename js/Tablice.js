@@ -132,4 +132,7 @@
 	this.getPlansza = function(){
 		return plansza;
 	}
+	this.getWyspy = function () {
+	    return wyspy;
+	}
 }

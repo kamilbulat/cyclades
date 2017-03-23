@@ -1,6 +1,6 @@
 ﻿function Game() {
     var scene = main.getScene();
-    var plansza = Tablice.getPlansza();
+    var plansza = tablice.getPlansza()
     var mesh;
     var wodaMaterial;
     var wyspaMaterial;
@@ -44,13 +44,14 @@
     }
 
     function initObjects(){
-    	cylinderGeometry = new THREE.CylinderGeometry( 10, 10, 2, 6, 1 );
-    	wodaYellowMesh = new THREE.Mesh(CylinderGeometry, wodaYellowMaterial)
-    	wodaBlackMesh = new THREE.Mesh(CylinderGeometry, wodaBlackMaterial)
-    	wodaMesh = new THREE.Mesh(CylinderGeometry, wodaMaterial)
-    	wyspaYellowMesh = new THREE.Mesh(CylinderGeometry, wyspaYellowMaterial)
-    	wyspaBlackMesh = new THREE.Mesh(CylinderGeometry, wyspaBlackMaterial)
-    	wyspaMesh = new THREE.Mesh(CylinderGeometry, wyspaMaterial)
+    	cylinderGeometry = new THREE.CylinderGeometry( 50, 50, 2, 6, 1 );
+    	wodaYellowMesh = new THREE.Mesh(cylinderGeometry, wodaYellowMaterial)
+    	wodaBlackMesh = new THREE.Mesh(cylinderGeometry, wodaBlackMaterial)
+    	wodaMesh = new THREE.Mesh(cylinderGeometry, wodaMaterial)
+    	wyspaYellowMesh = new THREE.Mesh(cylinderGeometry, wyspaYellowMaterial)
+    	wyspaBlackMesh = new THREE.Mesh(cylinderGeometry, wyspaBlackMaterial)
+    	wyspaMesh = new THREE.Mesh(cylinderGeometry, wyspaMaterial)
+        
     }
 
     this.drawPlansza = function(){
@@ -85,10 +86,14 @@
     					break;
     				}	
     			}
-    			mesh.position.set(j*10, 0, i*10)
+    			mesh.position.set((j - plansza[i].length / 2) * 100 +50, 0, (i - 5.5) * 50 * Math.sqrt(3)+50*Math.sqrt(3)/2)
     			scene.add(mesh)
     			mesh = ""
     		}
     	}
+        console.log(scene)
     }
+    initMaterials();
+    initObjects();
+    this.drawPlansza();
 }
