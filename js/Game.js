@@ -1,3 +1,4 @@
 ﻿function Game() {
-    console.log("game")
+    var scene = main.getScene();
+    var plansza = Tablice.getPlansza();
 }
