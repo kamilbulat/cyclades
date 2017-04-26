@@ -68,7 +68,7 @@
     				}
     			}
     			else {
-                    plansza[i][j]
+                    //plansza[i][j]
     				//wyspa
     				/*switch(plansza[i][j].flaga){
     					case "yellow":
