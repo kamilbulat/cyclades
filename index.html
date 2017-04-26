@@ -24,6 +24,17 @@
             var kolejnosc;
             var net;
             main = new Main();
+
+            /**
+            var div = document.createElement("DIV")
+            div.src = "./static/panel.html"
+            document.getElementById("panel").appendChild(div)
+            */
+
+            //document.all['panel'].innerHTML = "<iframe src='./static/panel.html' width='100%' height='100%' border='0'></iframe>";
+            
+            $("#panel").load("./static/panel.html")
+            $("#svg8").on("click",function(){alert("xd")})
         })
     </script>
 </head>
