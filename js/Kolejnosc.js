@@ -4,4 +4,7 @@
         console.log("Grasz żółtymi")
 
     }
+    this.walka = function () {
+
+    }
 }

@@ -7,7 +7,7 @@
 		],
 		[
 			{ typ: "wyspa", nazwa: 0 }, 
-			{ typ: "woda", flaga: "yellow", statki: 1 }, 
+			{ typ: "woda", flaga: "yellow", statki: 3 }, 
 			{ typ: "woda", flaga: "", statki: 0 }
 		],
 		[
