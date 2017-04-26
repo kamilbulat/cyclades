@@ -2,3 +2,14 @@
     overflow:hidden;
     margin:0;
 }
+#plansza{
+    left: 15vw;
+    position: absolute;
+    width: 70vw;
+}
+#panel{
+    background-color: grey;
+    width: 30vw;
+    height: 100vh;
+    position: absolute;
+}
