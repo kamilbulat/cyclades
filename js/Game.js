@@ -1,5 +1,4 @@
 ﻿function Game() {
-    var scene = main.getScene();
     var plansza = tablice.getPlansza()
     var mesh;
     var wodaMaterial;
@@ -19,13 +18,11 @@
                    })
     	wodaYellowMaterial = new THREE.MeshBasicMaterial({
                        side: THREE.DoubleSide,
-                       map: THREE.ImageUtils.loadTexture("./../gfx/water.jpg"),
-                       color: 0xffff00,
+                       map: THREE.ImageUtils.loadTexture("./../gfx/yellowWater.jpg"),
                    })
     	wodaBlackMaterial = new THREE.MeshBasicMaterial({
                        side: THREE.DoubleSide,
-                       map: THREE.ImageUtils.loadTexture("./../gfx/water.jpg"),
-                       color: 0x000000,
+                       map: THREE.ImageUtils.loadTexture("./../gfx/blackWater.jpg"),
                    })
     	wyspaMaterial = new THREE.MeshBasicMaterial({
                        side: THREE.DoubleSide,
@@ -33,13 +30,11 @@
                    })
     	wyspaYellowMaterial = new THREE.MeshBasicMaterial({
                        side: THREE.DoubleSide,
-                       map: THREE.ImageUtils.loadTexture("./../gfx/island.jpg"),
-                       color: 0xffff00,
+                       map: THREE.ImageUtils.loadTexture("./../gfx/yellowIsland.jpg"),
                    })
     	wyspaBlackMaterial = new THREE.MeshBasicMaterial({
                        side: THREE.DoubleSide,
-                       map: THREE.ImageUtils.loadTexture("./../gfx/island.jpg"),
-                       color: 0x000000,
+                       map: THREE.ImageUtils.loadTexture("./../gfx/blackIsland.jpg"),
                    })
     }
 
@@ -72,9 +67,10 @@
     					break;
     				}
     			}
-    			else{
+    			else {
+                    plansza[i][j]
     				//wyspa
-    				switch(plansza[i][j].flaga){
+    				/*switch(plansza[i][j].flaga){
     					case "yellow":
     						mesh = wyspaYellowMesh.clone()
     					break;
@@ -82,18 +78,20 @@
     						mesh = wyspaBlackMesh.clone()
     					break;
     					default:
-    						mesh = wyspaMesh.clone()
+    						
     					break;
-    				}	
+    				}*/
+    				mesh = wyspaMesh.clone()
     			}
     			mesh.position.set((j - plansza[i].length / 2) * 100 +50, 0, (i - 5.5) * 50 * Math.sqrt(3)+50*Math.sqrt(3)/2)
     			scene.add(mesh)
     			mesh = ""
     		}
     	}
-        console.log(scene)
     }
     initMaterials();
     initObjects();
     this.drawPlansza();
+
+
 }

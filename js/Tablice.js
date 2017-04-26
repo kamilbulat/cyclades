@@ -6,19 +6,19 @@
 			{ typ: "woda", flaga: "", przyrost: 1, statki: 0  }
 		],
 		[
-			{ typ: "wyspa", flaga: "yellow", nazwa: "w1" }, 
+			{ typ: "wyspa", nazwa: 0 }, 
 			{ typ: "woda", flaga: "yellow", statki: 1 }, 
 			{ typ: "woda", flaga: "", statki: 0 }
 		],
 		[
 			{ typ: "woda", flaga: "", statki: 0 }, 
 			{ typ: "woda", flaga: "", statki: 0 }, 
-			{ typ: "wyspa", flaga: "black", nazwa: "w2" }, 
-			{ typ: "wyspa", flaga: "", nazwa: "w2" }
+			{ typ: "wyspa", nazwa: 1 }, 
+			{ typ: "wyspa", nazwa: 1 }
 		],
 		[
 			{ typ: "woda", flaga: "", statki: 0 },
-			{ typ: "wyspa", flaga: "", nazwa: "w3" },
+			{ typ: "wyspa", nazwa: 2 },
 			{ typ: "woda", flaga: "", statki: 0 },
 			{ typ: "woda", flaga: "black", statki: 0 },
 			{ typ: "woda", flaga: "", statki: 0 }
@@ -26,14 +26,14 @@
 		[
 			{ typ: "woda", flaga: "", statki: 0 },
 			{ typ: "woda", flaga: "", statki: 0 },
-			{ typ: "wyspa", flaga: "", nazwa: "w3" },
+			{ typ: "wyspa", nazwa: 2 },
 			{ typ: "woda", flaga: "", statki: 0 },
-			{ typ: "wyspa", flaga: "", nazwa: "w4" },
+			{ typ: "wyspa", nazwa: 3 },
 			{ typ: "woda", flaga: "", statki: 0 }
 		],
 		[
 			{ typ: "woda", flaga: "", przyrost: 1, statki: 0  },
-			{ typ: "wyspa", flaga: "", nazwa: "w5" },
+			{ typ: "wyspa", nazwa: 4 },
 			{ typ: "woda", flaga: "", statki: 0 },
 			{ typ: "woda", flaga: "", statki: 0 },
 			{ typ: "woda", flaga: "", statki: 0 },
@@ -41,33 +41,33 @@
 			{ typ: "woda", flaga: "", przyrost: 1, statki: 0  }
 		],
 		[
-			{ typ: "wyspa", flaga: "", nazwa: "w5" },
-			{ typ: "wyspa", flaga: "", nazwa: "w5" },
+			{ typ: "wyspa", nazwa: 4 },
+			{ typ: "wyspa", nazwa: 4 },
 			{ typ: "woda", flaga: "", statki: 0 },
-			{ typ: "wyspa", flaga: "", nazwa: "w6" },
+			{ typ: "wyspa", nazwa: 5 },
 			{ typ: "woda", flaga: "", statki: 0 },
-			{ typ: "wyspa", flaga: "yellow", nazwa: "w7" }
+			{ typ: "wyspa", nazwa: 6 }
 		],
 		[
 			{ typ: "woda", flaga: "", statki: 0 },
 			{ typ: "woda", flaga: "", statki: 0 },
 			{ typ: "woda", flaga: "", statki: 0 },
 			{ typ: "woda", flaga: "", statki: 0 },
-			{ typ: "wyspa", flaga: "yellow", nazwa: "w7" }
+			{ typ: "wyspa", nazwa: 6 }
 		],	
 		[
-			{ typ: "wyspa", flaga: "yellow", nazwa: "w8" },
+			{ typ: "wyspa", nazwa: 7 },
 			{ typ: "woda", flaga: "", statki: 0 },
 			{ typ: "woda", flaga: "", statki: 0 },
-			{ typ: "wyspa", flaga: "yellow", nazwa: "w7" }
+			{ typ: "wyspa", nazwa: 6 }
 		],
 		[
-			{ typ: "wyspa", flaga: "yellow", nazwa: "w8" },
+			{ typ: "wyspa", nazwa: 7 },
 			{ typ: "woda", flaga: "", statki: 0 },
-			{ typ: "wyspa", flaga: "yellow", nazwa: "w7" }
+			{ typ: "wyspa", nazwa: 6 }
 		],
 		[
-			{ typ: "wyspa", flaga: "yellow", nazwa: "w8" },
+			{ typ: "wyspa", nazwa: 7 },
 			{ typ: "woda", flaga: "", statki: 0 }
 		]
 	]

@@ -32,10 +32,17 @@
         requestAnimationFrame(animateScene);
         renderer.render(scene, camera);
     }
+
     this.getScene = function () {
         return scene;
     }
     initEngine();
     initObjects();
     animateScene();
+    login = new Login();
+    tablice = new Tablice();
+    game = new Game();
+    panel = new Panel();
+    net = new Net();
+    kolejnosc = new Kolejnosc();
 }

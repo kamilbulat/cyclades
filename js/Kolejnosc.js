@@ -1,4 +1,7 @@
 ﻿function Kolejnosc() {
-    console.log("kolejnosc")
-    //this.start = function()
+    
+    this.start = function () {
+        console.log("Grasz żółtymi")
+
+    }
 }
