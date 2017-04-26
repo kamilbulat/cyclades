@@ -1,5 +1,6 @@
 ﻿function Game() {
     var plansza = tablice.getPlansza()
+    var wyspy = tablice.getWyspy();
     var mesh;
     var wodaMaterial;
     var wyspaMaterial;
@@ -68,9 +69,8 @@
     				}
     			}
     			else {
-                    //plansza[i][j]
     				//wyspa
-    				/*switch(plansza[i][j].flaga){
+    				switch(wyspy[plansza[i][j].nazwa].flaga){
     					case "yellow":
     						mesh = wyspaYellowMesh.clone()
     					break;
@@ -78,10 +78,10 @@
     						mesh = wyspaBlackMesh.clone()
     					break;
     					default:
-    						
+    					    mesh = wyspaMesh.clone()
     					break;
-    				}*/
-    				mesh = wyspaMesh.clone()
+    				}
+    				
     			}
     			mesh.position.set((j - plansza[i].length / 2) * 100 +50, 0, (i - 5.5) * 50 * Math.sqrt(3)+50*Math.sqrt(3)/2)
     			scene.add(mesh)
